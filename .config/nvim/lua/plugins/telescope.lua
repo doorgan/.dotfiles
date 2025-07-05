@@ -43,6 +43,20 @@ return {
 			vim.keymap.set("n", "<leader>sn", function()
 				builtin.find_files({ cwd = vim.fn.stdpath("config") })
 			end, { desc = "[S]earch [N]eovim files" })
+
+      require("telescope").setup({
+        defaults = {
+          mappings = {
+            n = {
+              ['<c-d>'] = require('telescope.actions').delete_buffer
+            }, -- n
+            i = {
+              ["<C-h>"] = "which_key",
+              ['<c-d>'] = require('telescope.actions').delete_buffer
+            }
+          }
+        }
+      })
 		end,
 	},
 	{
