@@ -1,5 +1,6 @@
 . "$HOME/.asdf/asdf.sh"
 
+alias dotfiles='/usr/bin/git --git-dir=/Users/dorgan/.dotfiles/ --work-tree=/Users/dorgan'
 
 # bun completions
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
@@ -26,3 +27,4 @@ compinit
 # Aliases
 alias liveiex="iex --sname liveiex --cookie liveiex"
 alias lg="lazygit"
+alias ljj="lazyjj"
